@@ -189,12 +189,22 @@
       font-size: 2rem;
     }
 
-    /* Responsivo */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
+    /* MENÚ HAMBURGUESA */
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+    }
 
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* Estilos para el menú en pantallas pequeñas */
+    @media (max-width: 768px) {
       .logo {
         width: 80px;
         top: 10px;
@@ -204,29 +214,38 @@
       nav {
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
       }
 
-      .slider {
-        aspect-ratio: 4 / 3;
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
       }
 
-      .slider button {
-        font-size: 1.5rem;
+      .nav-links a {
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav.active .nav-links {
+        display: flex;
       }
     }
 
+    /* Respuesta al hover en dispositivos móviles */
     @media (max-width: 480px) {
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
 
       h2 {
         font-size: 1.2rem;
-      }
-
-      .logo {
-        width: 60px;
       }
 
       .slider {
@@ -247,15 +266,20 @@
   </header>
 
   <nav>
-    <a href="index.html">Inicio</a>
-    <a href="Actividades.html">Actividades</a>
-    <a href="Quienes.html">Quiénes Somos</a>
-    <div class="dropdown">
-      <a href="#">Personal ▾</a>
-      <div class="dropdown-content">
-        <a href="Personal.html">Directivos</a>
-        <a href="Docentes.html">Docentes</a>
-        <a href="Asistentes.html">Asistentes</a>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="bi bi-list"></i>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="Actividades.html">Actividades</a>
+      <a href="Quienes.html">Quiénes Somos</a>
+      <div class="dropdown">
+        <a href="#">Personal ▾</a>
+        <div class="dropdown-content">
+          <a href="Personal.html">Directivos</a>
+          <a href="Docentes.html">Docentes</a>
+          <a href="Asistentes.html">Asistentes</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -287,6 +311,12 @@
 
       nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
       prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+
+      // Función para activar/desactivar el menú
+      function toggleMenu() {
+        const nav = document.querySelector('nav');
+        nav.classList.toggle('active');
+      }
     </script>
   </section>
 
