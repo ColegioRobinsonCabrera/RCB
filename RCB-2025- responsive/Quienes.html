@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header, nav, main, footer {
+    padding: 1em;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0.5em 1em;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+
+  .container > div {
+    flex: 1 1 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+</style>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Colegio RCB </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background-color: #778583;
+      color: rgb(7, 6, 6);
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0px;
+      z-index: 1000;
+      padding-left: 35px;
+      background-image: url('Im/image.jpg');
+      background-repeat: no-repeat;
+      background-position: 1px 1px;
+      background-size: 1500px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: #222;
+      padding: 0.5rem;
+      position: sticky;
+      top: 178px;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    h1 {
+        font-size: 45px
+    }
+    h2 {
+      color: #000000;
+    }
+    footer {
+      background-color: #778583;
+      text-align: center;
+      padding: -1rem;
+      color: #0e0e0e;
+      background-image: url('Im/image.jpg');
+      background-repeat: no-repeat;
+      background-position: 1px -600px;
+      background-size: 1500px;
+    }
+    i{
+      font-size: 35px;
+    }
+    .logo {
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      width: 140px;
+      height: auto;
+    }
+    @media (max-width: 600px) {
+      .logo {
+        width: 100px;
+        top: 10px;
+        left: 10px;
+      }
+
+      header {
+        padding-left: 130px;
+      }
+    }
+    .Direccion {
+      width: 95%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      max-width: 800px;
+      max-height: 350px;
+      border: 1px solid #ddd8dd;
+      background-color: #ececec;
+      display: inline-block;
+      padding: 1px;
+    }
+    .borde-texto {
+      border: 1px solid rgb(148, 138, 138);
+      display: inline-block;
+      padding: 5px;
+    }
+    .borde-texto2 {
+      border: 1px solid #ddd8dd;
+      background-color: #ececec;
+      display: inline-block;
+      padding: 5px;
+    }
+    .borde-texto3 {
+      border: 1px solid #ddd8dd;
+      background-color: #ececec;
+      display: inline-block;
+      padding: 5px;
+    }
+    
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Im/N.png" alt="Logo" class="logo">
+    <h1>COLEGIO RCB </h1>
+    <p>NUESTRO ESTABLECIMIENTO 2025</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="Actividades.html">Actividades</a>
+    <a href="Logros.html">Logros</a>
+    <div class="dropdown">
+      <a href="#">Personal ▾</a>
+      <div class="dropdown-content">
+        <a href="Personal.html">Directivos</a>
+        <a href="Docentes.html">Docentes</a>
+        <a href="Asistentes.html">Asistentes</a>
+      </div>
+    </div>
+  </nav>
+  <br>
+<center>
+<div style="display: flex; justify-content: space-between; gap: 1%;">
+  <div style="width: 48%; margin: 10px;" id="Mision" class="borde-texto2">
+    <h2><u>Mision del Colegio</u></h2>
+    <p class="borde-texto">Mision</p>
+  </div>
+  <div style="width: 48%; margin: 10px;"id="Vision" class="borde-texto2">
+    <h2><u>Vision del Colegio</u></h2>
+    <p class="borde-texto">Vision</p>
+  </div>
+</div>
+</center>
+<br>
+ <center> <a href="https://www.google.cl/maps/place/Colegio+Robinson+Cabrera+Beltr%C3%A1n,+Retiro/@-36.2180709,-71.5985641,17z/data=!4m6!3m5!1s0x966f3fbf782e4fdf:0x6f5251d3c95c58a6!8m2!3d-36.2181618!4d-71.5968368!16s%2Fg%2F11bvcv5wgq?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoASAFQAw%3D%3D"><img src="Im/Di.png" alt="Direccion" class="Direccion"></a></center>
+<br>
+<center><div class="borde-texto3">
+ <h3><u>Informacion</u></h3>
+  <p><b>Numero de Telefono:</b> +56 9 6599 8917
+    <br>
+    <br>
+    <b>Direccion:</b> Sector los Cuarteles, Camino a la Montaña km 23, Retiro
+    <br>
+    <br>
+    <b>Email:</b> isidoro.ramos@daemretiro.cl
+  </p>
+</div>
+</center>
+<br>
+<br>
+<footer>
+  <br>
+  <a href="https://web.facebook.com/p/Colegio-Robinson-Cabrera-Beltr%C3%A1n-Retiro-P%C3%A1gina-Oficial-100057069895020/?_rdc=1&_rdr#"><i class="bi bi-facebook"></i></a>
+  <br>
+  &copy; RCB 2025
+</footer>
+</body>
+</html>
