@@ -1,124 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Colegio RCB </title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colegio RCB</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
   <style>
-    html {
-      scroll-behavior: smooth;
+    * {
+      box-sizing: border-box;
     }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #f4f4f4;
+      background-color: #f4f4f4;
     }
+
     header {
       background-color: #778583;
-      color: rgb(7, 6, 6);
-      padding: 1rem;
+      color: #070606;
+      padding: 2rem 1rem;
       text-align: center;
       position: sticky;
-      top: 0px;
+      top: 0;
       z-index: 1000;
-      padding-left: 35px;
       background-image: url('Im/image.jpg');
       background-repeat: no-repeat;
-      background-position: 1px 1px;
-      background-size: 1500px;
+      background-position: center;
+      background-size: cover;
     }
+
+    .logo {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 100px;
+      height: auto;
+    }
+
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
+      gap: 1rem;
       background-color: #222;
       padding: 0.5rem;
       position: sticky;
-      top: 178px;
+      top: 150px;
       z-index: 1000;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
-    section {
-      padding: 3rem 2rem;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-    h1 {
-        font-size: 45px
-    }
-    h2 {
-      color: #000000;
-    }
-    footer {
-      background-color: #778583;
-      text-align: center;
-      padding: -1rem;
-      color: #0e0e0e;
-      background-image: url('Im/image.jpg');
-      background-repeat: no-repeat;
-      background-position: 1px -600px;
-      background-size: 1500px;
-    }
-    i{
-      font-size: 35px;
-    }
-    .logo {
-      position: absolute;
-      top: 30px;
-      left: 40px;
-      width: 140px;
-      height: auto;
-    }
-    @media (max-width: 600px) {
-      .logo {
-        width: 100px;
-        top: 10px;
-        left: 10px;
-      }
 
-      header {
-        padding-left: 130px;
-      }
-    }
-    .Direccion {
-      width: 95%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      max-width: 800px;
-      max-height: 350px;
-      border: 1px solid #ddd8dd;
-      background-color: #ececec;
-      display: inline-block;
-      padding: 1px;
-    }
-    .borde-texto {
-      border: 1px solid rgb(148, 138, 138);
-      display: inline-block;
-      padding: 5px;
-    }
-    .borde-texto2 {
-      border: 1px solid #ddd8dd;
-      background-color: #ececec;
-      display: inline-block;
-      padding: 5px;
-    }
-    .borde-texto3 {
-      border: 1px solid #ddd8dd;
-      background-color: #ececec;
-      display: inline-block;
-      padding: 5px;
-    }
-    
     .dropdown {
       position: relative;
     }
@@ -146,13 +87,120 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    h2 {
+      color: #000000;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .text-box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem auto;
+    }
+
+    .borde-texto2 {
+      flex: 1 1 300px;
+      max-width: 48%;
+      padding: 1rem;
+      border: 1px solid #ddd8dd;
+      background-color: #ececec;
+    }
+
+    .borde-texto {
+      border: 1px solid #948a8a;
+      display: inline-block;
+      padding: 0.5rem;
+      background-color: #fff;
+      margin-top: 0.5rem;
+    }
+
+    .direccion-img {
+      width: 95%;
+      max-width: 800px;
+      height: auto;
+      border: 1px solid #ddd8dd;
+      background-color: #ececec;
+      display: block;
+      margin: 2rem auto;
+    }
+
+    .borde-texto3 {
+      border: 1px solid #ddd8dd;
+      background-color: #ececec;
+      padding: 1rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #778583;
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #0e0e0e;
+      background-image: url('Im/image.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    i {
+      font-size: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .logo {
+        width: 70px;
+        top: 10px;
+        left: 10px;
+      }
+
+      header {
+        padding-left: 130px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .borde-texto2 {
+        max-width: 100%;
+      }
+
+      .direccion-img {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="Im/N.png" alt="Logo" class="logo">
-    <h1>COLEGIO RCB </h1>
+    <img src="Im/N.png" alt="Logo" class="logo" />
+    <h1>COLEGIO RCB</h1>
     <p>NUESTRO ESTABLECIMIENTO 2025</p>
   </header>
 
@@ -169,41 +217,38 @@
       </div>
     </div>
   </nav>
-  <br>
-<center>
-<div style="display: flex; justify-content: space-between; gap: 1%;">
-  <div style="width: 48%; margin: 10px;" id="Mision" class="borde-texto2">
-    <h2><u>Mision del Colegio</u></h2>
-    <p class="borde-texto">Mision</p>
-  </div>
-  <div style="width: 48%; margin: 10px;"id="Vision" class="borde-texto2">
-    <h2><u>Vision del Colegio</u></h2>
-    <p class="borde-texto">Vision</p>
-  </div>
-</div>
-</center>
-<br>
- <center> <a href="https://www.google.cl/maps/place/Colegio+Robinson+Cabrera+Beltr%C3%A1n,+Retiro/@-36.2180709,-71.5985641,17z/data=!4m6!3m5!1s0x966f3fbf782e4fdf:0x6f5251d3c95c58a6!8m2!3d-36.2181618!4d-71.5968368!16s%2Fg%2F11bvcv5wgq?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoASAFQAw%3D%3D"><img src="Im/Di.png" alt="Direccion" class="Direccion"></a></center>
-<br>
-<center><div class="borde-texto3">
- <h3><u>Informacion</u></h3>
-  <p><b>Numero de Telefono:</b> +56 9 6599 8917
-    <br>
-    <br>
-    <b>Direccion:</b> Sector los Cuarteles, Camino a la Montaña km 23, Retiro
-    <br>
-    <br>
-    <b>Email:</b> isidoro.ramos@daemretiro.cl
-  </p>
-</div>
-</center>
-<br>
-<br>
-<footer>
-  <br>
-  <a href="https://web.facebook.com/p/Colegio-Robinson-Cabrera-Beltr%C3%A1n-Retiro-P%C3%A1gina-Oficial-100057069895020/?_rdc=1&_rdr#"><i class="bi bi-facebook"></i></a>
-  <br>
-  &copy; RCB 2025
-</footer>
+
+  <section>
+    <div class="text-box-container">
+      <div class="borde-texto2">
+        <h2><u>Misión del Colegio</u></h2>
+        <p class="borde-texto">Misión</p>
+      </div>
+      <div class="borde-texto2">
+        <h2><u>Visión del Colegio</u></h2>
+        <p class="borde-texto">Visión</p>
+      </div>
+    </div>
+
+    <a href="https://www.google.cl/maps/place/Colegio+Robinson+Cabrera+Beltr%C3%A1n,+Retiro/@-36.2180709,-71.5985641,17z/data=!4m6!3m5!1s0x966f3fbf782e4fdf:0x6f5251d3c95c58a6!8m2!3d-36.2181618!4d-71.5968368!16s%2Fg%2F11bvcv5wgq?entry=ttu">
+      <img src="Im/Di.png" alt="Dirección" class="direccion-img" />
+    </a>
+
+    <div class="borde-texto3">
+      <h3><u>Información</u></h3>
+      <p>
+        <b>Teléfono:</b> +56 9 6599 8917<br><br>
+        <b>Dirección:</b> Sector los Cuarteles, Camino a la Montaña km 23, Retiro<br><br>
+        <b>Email:</b> isidoro.ramos@daemretiro.cl
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <a href="https://web.facebook.com/p/Colegio-Robinson-Cabrera-Beltr%C3%A1n-Retiro-P%C3%A1gina-Oficial-100057069895020/"><i class="bi bi-facebook"></i></a>
+    <br />
+    &copy; RCB 2025
+  </footer>
+
 </body>
 </html>
