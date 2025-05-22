@@ -159,30 +159,38 @@ nav a:hover {
   max-width: 600px;
   aspect-ratio: 3 / 2;
   margin: 20px auto;
-  cursor: pointer;
   overflow: hidden;
+  cursor: pointer;
+  background-color: #000;
 }
 
 .toggle-img, .toggle-text {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  background-color: #222;
-  color: white;
   transition: opacity 0.3s;
 }
 
+.toggle-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .toggle-text {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  background-color: rgba(0,0,0,0.85);
+  font-size: 1rem;
+  overflow-y: auto;
   opacity: 0;
   pointer-events: none;
-  padding: 20px;
-  text-align: center;
 }
 
 .toggle-slide.active .toggle-img {
@@ -196,7 +204,7 @@ nav a:hover {
 }
 
   </style>
-  <script>
+ <script>
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.toggle-slide').forEach(slide => {
       slide.addEventListener('click', () => {
@@ -234,7 +242,11 @@ nav a:hover {
   <div style="width: 48%; margin: 10px;" id="Mision" class="borde-texto2">
   <div class="toggle-slide">
   <img src="Im/mision.jpg" alt="Ejemplo" class="toggle-img">
-  <div class="toggle-text">Este es el texto que aparece al hacer clic</div>
+  <div class="toggle-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facilis voluptatum amet? Omnis praesentium, maxime illo veniam quisquam, dolor iste quis ea nesciunt blanditiis impedit, aspernatur nam quas nemo voluptas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga iste repellat sequi distinctio, ex modi, nisi aut magnam sit commodi quos pariatur, omnis rem nulla expedita animi quia! Laboriosam, odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsum iusto beatae cupiditate distinctio officiis eveniet aspernatur, ipsam doloremque eos quasi architecto officia laborum. Error vero similique architecto commodi ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quos dolores nam iusto at sequi magni cum officiis, quia dolorem laborum architecto rerum quam autem non. Cumque iste assumenda perspiciatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem suscipit omnis ad tempora illo porro quod facilis sunt, soluta id, quia repudiandae iste, asperiores laudantium ullam obcaecati doloremque odit magnam.
+  Accusantium veniam mollitia earum, esse voluptatibus deserunt voluptate sed quibusdam, dicta officia eius quas minus odit distinctio molestias? Ipsam eius facere quae provident quod inventore aspernatur odit nulla dignissimos fugit.
+  Laboriosam id blanditiis, excepturi optio iste vero facere, culpa quos, minima sequi accusantium aspernatur neque. Natus earum nesciunt debitis modi quae odio provident et aliquid omnis, culpa necessitatibus, nobis mollitia.
+  Voluptas deserunt quo nesciunt aut est nobis et iure ea in itaque aliquid iusto repellat, beatae tempora eius animi enim harum aspernatur, dignissimos eaque. Ipsam neque commodi quam fugiat nihil?
+  Perferendis delectus libero nihil illum doloribus commodi sapiente. Necessitatibus sunt unde ullam quasi quaerat veniam iusto, aperiam reprehenderit facilis porro perspiciatis quas. Neque ex explicabo reprehenderit officia optio delectus sapiente.</div>
   </div>
     <h2><u>Mision del Colegio</u></h2>
   </div>
