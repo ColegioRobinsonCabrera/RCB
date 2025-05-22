@@ -208,6 +208,16 @@ nav a:hover {
 .slider .next {
   right: 1px;
 }
+    .slider button {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.slider:hover button {
+  opacity: 1;
+  pointer-events: auto;
+}
      </style>
    
     <script>
