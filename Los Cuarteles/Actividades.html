@@ -148,6 +148,35 @@ nav a:hover {
     .WC{
       color: #0716e9;
     }
+    <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.slider').forEach(slider => {
+      const wrapper = slider.querySelector('.slider-wrapper');
+      const slides = wrapper.querySelectorAll('.slide');
+      const prev = slider.querySelector('.prev');
+      const next = slider.querySelector('.next');
+      let current = 0;
+
+      function goToSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        wrapper.style.transform = `translateX(-${index * 100}%)`;
+        current = index;
+      }
+
+      function nextSlide() {
+        goToSlide(current + 1);
+      }
+
+      function prevSlide() {
+        goToSlide(current - 1);
+      }
+
+      next.addEventListener('click', nextSlide);
+      prev.addEventListener('click', prevSlide);
+    });
+  });
+</script>
     
   </style>
 </head>
@@ -186,16 +215,42 @@ nav a:hover {
       
     </div>  
   </div>
+</center>
   <br>
   <br>
-  <div id="Mision" class="borde-texto2">
-    <h2><u>Taller Voleibol RCB 2025</u></h2>
-    <div>
-      <p class="borde-texto">El voleibol es un deporte donde dos equipos se enfrentan sobre un terreno de juego liso separados por una red central, tratando de pasar el balón por encima de la red hacia el suelo del campo contrario.</p>
-      <img src="Im/a.jpg" alt="ai" class="ai">
-      
-    </div>  
+  <center>
+<div class="borde-texto2">
+  <center><h2><u> Taller Voleibol RCB 2025</u></h2></center>
+  <center><p class="borde-texto">El voleibol es un deporte donde dos equipos se enfrentan sobre un terreno de juego liso separados por una red central, tratando de pasar el balón por encima de la red hacia el suelo del campo contrario.</p></center>
+  <div class="slider">
+    <div class="slider-wrapper">
+      <div class="slide"><img src="Im/IMG-20250520-WA0014.jpg" alt="Voleibol" class="ai"></div>
+      <div class="slide"><img src="Im/IMG-20250520-WA0013.jpg" alt="Voleibol" class="ai"></div>
+      <div class="slide"><img src="Im/IMG-20250520-WA0010.jpg" alt="Voleibol" class="ai"></div>
+    </div>
+  
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
   </div>
+</div>
+</center>
+<br>
+<center>
+<div class="borde-texto2">
+  <center><h2><u> Taller Ping-Pong RCB 2025</u></h2></center>
+  <center><p class="borde-texto">El ping pong, también conocido como tenis de mesa, es un deporte de raqueta y pelota que se juega sobre una mesa, similar al tenis pero en miniatura. Dos o cuatro jugadores se enfrentan, golpeando una pelota ligera de un lado a otro de la mesa con sus raquetas. </p></center>
+  <div class="slider">
+    <div class="slider-wrapper">
+      <div class="slide"><img src="Im/IMG-20250520-WA0012.jpg" alt="Voleibol" class="ai"></div>
+      <div class="slide"><img src="Im/IMG-20250520-WA0011.jpg" alt="Voleibol" class="ai"></div>
+      <div class="slide"><img src="Im/IMG-20250520-WA0009.jpg" alt="Voleibol" class="ai"></div>
+      <div class="slide"><img src="Im/IMG-20250520-WA0008.jpg" alt="Voleibol" class="ai"></div>
+    </div>
+  
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</div>
 </center>
 <br>
   <footer>
