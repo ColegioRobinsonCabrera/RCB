@@ -153,7 +153,58 @@ nav a:hover {
     .WC{
       color: #0716e9;
     }
+  .toggle-slide {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 3 / 2;
+  margin: 20px auto;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.toggle-img, .toggle-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  background-color: #222;
+  color: white;
+  transition: opacity 0.3s;
+}
+
+.toggle-text {
+  opacity: 0;
+  pointer-events: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.toggle-slide.active .toggle-img {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toggle-slide.active .toggle-text {
+  opacity: 1;
+  pointer-events: auto;
+}
+
   </style>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.toggle-slide').forEach(slide => {
+      slide.addEventListener('click', () => {
+        slide.classList.toggle('active');
+      });
+    });
+  });
+</script>
 </head>
 <body>
 
@@ -181,12 +232,18 @@ nav a:hover {
 <center>
 <div style="display: flex; justify-content: space-between; gap: 1%;">
   <div style="width: 48%; margin: 10px;" id="Mision" class="borde-texto2">
+  <div class="toggle-slide">
+  <img src="Im/mision.jpg" alt="Ejemplo" class="toggle-img">
+  <div class="toggle-text">Este es el texto que aparece al hacer clic</div>
+  </div>
     <h2><u>Mision del Colegio</u></h2>
-    <p class="borde-texto">Mision</p>
   </div>
   <div style="width: 48%; margin: 10px;"id="Vision" class="borde-texto2">
+  <div class="toggle-slide">
+  <img src="Im/vision.jpg" alt="Ejemplo" class="toggle-img">
+  <div class="toggle-text">Este es el texto que aparece al hacer clic</div>
+  </div>
     <h2><u>Vision del Colegio</u></h2>
-    <p class="borde-texto">Vision</p>
   </div>
 </div>
 </center>
