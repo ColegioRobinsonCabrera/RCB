@@ -142,6 +142,16 @@ nav a:hover {
 .slider .next {
   right: 10px;
 }
+    .slider button {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.slider:hover button {
+  opacity: 1;
+  pointer-events: auto;
+}
    @media (max-width: 600px) {
       .logo {
     width: 70px;
