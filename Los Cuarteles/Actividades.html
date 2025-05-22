@@ -148,6 +148,67 @@ nav a:hover {
     .WC{
       color: #0716e9;
     }
+    .slider {
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 3 / 2; 
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: center;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  object-fit: cover;
+}
+
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 40px;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.slider button:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.slider .prev {
+  left: 1px;
+}
+
+.slider .next {
+  right: 1px;
+}
+   
     <script>
   window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.slider').forEach(slider => {
