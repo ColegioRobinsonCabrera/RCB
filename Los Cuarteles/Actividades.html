@@ -210,6 +210,18 @@ nav a:hover {
   max-width: 1200px;
   object-fit: cover;
 }
+.video-slider {
+  aspect-ratio: unset; /* Elimina el ratio fijo */
+  height: auto;
+}
+
+.video-slider .slide video {
+  width: 90%;
+  height: 90%;
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+}
 
 
 .slider button {
@@ -303,21 +315,30 @@ nav a:hover {
   </nav>
   <br>
   <center>
-  <div id="Mision" class="borde-texto2">
-    <h2><u>Taller Fulsal RCB 2025</u></h2>
-    <div>
-      <p class="borde-texto">El futsal, también conocido como fútbol sala o fútbol de salón, es una variante del fútbol que se juega en una cancha más pequeña, generalmente cubierta, con cinco jugadores por equipo en el campo. A diferencia del fútbol tradicional, el futsal se juega en una superficie dura, similar a una cancha de baloncesto, y tiene un balón más pequeño y pesado. </p>
-      <video width="1000" height="560" controls class="a3">
-      <source src="videos/V.mp4" type="video/mp4">
-      Tu navegador no soporta la etiqueta de video.
-      </video>
-      <br>
-      <video width="1000" height="560" controls class="a3">
-      <source src="videos/whatsapp-video-2025-05-22-at-164515_9ANyOAA1.mp4" type="video/mp4">
-      Tu navegador no soporta la etiqueta de video.
-      </video>
-    </div>  
+<div style="display: flex; justify-content: space-between; gap: 1%;" class="borde-texto3">
+  <div style="width: 40%; margin: 10px;" id="Mision" class="borde-texto3">
+    <center><h2><u>Taller Fulsal RCB 2025</u></h2></center>
+  <center><p class="borde-texto">El futsal, también conocido como fútbol sala o fútbol de salón, es una variante del fútbol que se juega en una cancha más pequeña, generalmente cubierta, con cinco jugadores por equipo en el campo. A diferencia del fútbol tradicional, el futsal se juega en una superficie dura, similar a una cancha de baloncesto, y tiene un balón más pequeño y pesado.</p></center>
   </div>
+  <div style="width: 60%; margin: 10px;"id="Vision" class="borde-texto3">
+    <div class="slider video-slider">
+  <div class="slider-wrapper">
+    <div class="slide">
+      <video controls class="a3">
+        <source src="videos/V.mp4" type="video/mp4">
+      Tu navegador no soporta la etiqueta de video.
+      </video></div>
+          <div class="slide">
+      <video controls class="a3">
+        <source src="videos/whatsapp-video-2025-05-22-at-164515_9ANyOAA1.mp4.mp4" type="video/mp4">
+      Tu navegador no soporta la etiqueta de video.
+      </video></div>
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>  
+  </div>
+</div>
 </center>
   <br>
   <center>
