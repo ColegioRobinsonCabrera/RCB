@@ -236,6 +236,31 @@ nav a:hover {
   height: auto;
   margin: 0 auto 1rem;
 }
+    .cardv-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 1rem;
+}
+
+.cardv {
+  flex: 1 1 600px;
+  max-width: 1020px;
+  padding: 1rem;
+  border: 1px solid #e2e2e2;
+  background-color: #cfcdcd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cardv img {
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  max-height: 1000px;
+  margin: 0 auto 1rem;
+}
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -295,19 +320,15 @@ nav a:hover {
   </nav>
   <br>
 <center>
-<div style="display: flex; justify-content: space-between; gap: 1%;">
-  <div style="width: 48%; margin: 10px;" id="Mision" class="borde-texto2">
+<div style="display: flex; justify-content: space-between; gap: 1%;" class="cardv-container">
+  <div style="width: 48%; margin: 10px;" id="Mision" class="cardv">
   <div class="toggle-slide">
   <img src="Im/mision.jpg" alt="Ejemplo" class="toggle-img">
-  <div class="toggle-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facilis voluptatum amet? Omnis praesentium, maxime illo veniam quisquam, dolor iste quis ea nesciunt blanditiis impedit, aspernatur nam quas nemo voluptas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga iste repellat sequi distinctio, ex modi, nisi aut magnam sit commodi quos pariatur, omnis rem nulla expedita animi quia! Laboriosam, odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsum iusto beatae cupiditate distinctio officiis eveniet aspernatur, ipsam doloremque eos quasi architecto officia laborum. Error vero similique architecto commodi ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quos dolores nam iusto at sequi magni cum officiis, quia dolorem laborum architecto rerum quam autem non. Cumque iste assumenda perspiciatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem suscipit omnis ad tempora illo porro quod facilis sunt, soluta id, quia repudiandae iste, asperiores laudantium ullam obcaecati doloremque odit magnam.
-  Accusantium veniam mollitia earum, esse voluptatibus deserunt voluptate sed quibusdam, dicta officia eius quas minus odit distinctio molestias? Ipsam eius facere quae provident quod inventore aspernatur odit nulla dignissimos fugit.
-  Laboriosam id blanditiis, excepturi optio iste vero facere, culpa quos, minima sequi accusantium aspernatur neque. Natus earum nesciunt debitis modi quae odio provident et aliquid omnis, culpa necessitatibus, nobis mollitia.
-  Voluptas deserunt quo nesciunt aut est nobis et iure ea in itaque aliquid iusto repellat, beatae tempora eius animi enim harum aspernatur, dignissimos eaque. Ipsam neque commodi quam fugiat nihil?
-  Perferendis delectus libero nihil illum doloribus commodi sapiente. Necessitatibus sunt unde ullam quasi quaerat veniam iusto, aperiam reprehenderit facilis porro perspiciatis quas. Neque ex explicabo reprehenderit officia optio delectus sapiente.</div>
+  <div class="toggle-text">Este es el texto que aparece al hacer clic</div>
   </div>
     <h2><u>Mision del Colegio</u></h2>
   </div>
-  <div style="width: 48%; margin: 10px;"id="Vision" class="borde-texto2">
+  <div style="width: 48%; margin: 10px;"id="Vision" class="cardv">
   <div class="toggle-slide">
   <img src="Im/vision.jpg" alt="Ejemplo" class="toggle-img">
   <div class="toggle-text">Este es el texto que aparece al hacer clic</div>
