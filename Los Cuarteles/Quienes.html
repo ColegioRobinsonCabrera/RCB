@@ -29,12 +29,40 @@
   background-size: cover;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: -2rem;
+  position: relative;
+}
+
 .logo {
-  position: absolute;
-  top: 1rem;
-  left: 0rem;
-  width: 100px;
+  width: 73px;
   height: auto;
+  margin-top: -30px; 
+  right: 0rem;
+}
+
+/* Estilo para escritorio */
+@media (min-width: 768px) {
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .logo {
+    width: 120px;
+    height: auto;
+     margin-right: 150px; /* empuja el logo a la izquierda */
+    margin-left: 10rem;  /* opcional: separa del borde izquierdo */
+  }
+
+  .header-text h1 {
+    margin: 0;
+    font-size: 3.69rem;
+  }
 }
 
 nav {
@@ -85,10 +113,6 @@ nav a:hover {
       font-size: 35px;
     }
     @media (max-width: 600px) {
-  .logo {
-    width: 70px;
-  }
-
   header h1 {
     font-size: 1.8rem;
   }
